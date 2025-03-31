@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游牧冒险之旅 - 蒙古草原骑手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tour-styles.css">
+    
+</head>
+<body>
+    <!-- Header with Background Image -->
+<header class="tour-header tour2">
+    <div class="header-bg"></div>
+    <div class="nav-wrapper">
+        <a href="index-chinese.html" class="logo">SteppeAdventures</a>
+        <ul class="nav-menu">
+            <li><a href="index-chinese.html#home">首页</a></li>
+            <li><a href="index-chinese.html#tours">我们的旅行</a></li>
+            <li><a href="index-chinese.html#bikes">我们的摩托车</a></li>
+            <li><a href="index-chinese.html#about">关于我们</a></li>
+            <li><a href="index-chinese.html#contact">联系我们</a></li>
+            <li class="language-container">
+                <a href="tour2.html">EN</a>
+            </li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    
+    <div class="tour-header-content">
+        <h1>游牧冒险之旅</h1>
+        <p>在探索蒙古壮丽风景的同时，沉浸于游牧文化之中</p>
+    </div>
+</header>
+
+    <div class="tour-detail-container">
+        <!-- Tour Overview -->
+        <section class="tour-overview">
+            <h2>旅行概览</h2>
+            <p>我们的游牧冒险之旅完美地融合了文化体验与壮丽的自然景观。穿越传奇的戈壁沙漠，参观古老的寺庙，拜访世代保持传统生活方式的游牧家庭。这个为期9天的冒险之旅专为那些寻求真实文化体验与刺激摩托车探索的骑行者设计。</p>
+            
+            <p>从沙漠到茂密的河谷，多样化的地形展示了蒙古景观的非凡多样性和其人民的坚韧精神。9天难忘的旅程中，总共覆盖约1,730公里。</p>
+            
+            <div class="tour-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>总距离</h3>
+                    <p>1,730 公里</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <h3>持续时间</h3>
+                    <p>9 天</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-mountain"></i>
+                    <h3>地形</h3>
+                    <p>沙漠, 草原, 河谷</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-campground"></i>
+                    <h3>住宿</h3>
+                    <p>蒙古包营地 & 游牧家庭寄宿</p>
+                </div>
+            </div>
+            
+            <p>与所有旅行一样，经验丰富的当地向导和全面的支持团队将全程陪伴您。这个全包式套餐包含餐食、住宿、摩托车租赁和文化体验，确保您一次真实而舒适的冒险。</p>
+        </section>
+        
+        <!-- Day by Day Slideshow -->
+        <section class="tour-days-container">
+            <h2>每日行程</h2>
+            
+            <div class="day-slideshow">
+                <div class="day-controls">
+                    <div class="day-nav">
+                        <button class="day-btn prev-day"><i class="fas fa-chevron-left"></i> 上一天</button>
+                        <button class="day-btn next-day">下一天 <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="day-counter">
+                        <span id="current-day">1</span>/9
+                    </div>
+                </div>
+                
+                <div class="day-indicators">
+                    <span class="day-dot active" onclick="goToDay(0)"></span>
+                    <span class="day-dot" onclick="goToDay(1)"></span>
+                    <span class="day-dot" onclick="goToDay(2)"></span>
+                    <span class="day-dot" onclick="goToDay(3)"></span>
+                    <span class="day-dot" onclick="goToDay(4)"></span>
+                    <span class="day-dot" onclick="goToDay(5)"></span>
+                    <span class="day-dot" onclick="goToDay(6)"></span>
+                    <span class="day-dot" onclick="goToDay(7)"></span>
+                    <span class="day-dot" onclick="goToDay(8)"></span>
+                </div>
+                
+                <div class="day-slides">
+                    <!-- Day 1 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/1_resized.jpg" alt="佐尔格勒海尔汗山">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">1</div>
+                                <div>
+                                    <h3 class="day-title">佐尔格勒海尔汗山 – 巴嘎嘎兹林楚卢</h3>
+                                    <span class="day-distance">220 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>早晨从乌兰巴托出发后，我们向南骑行前往神圣的佐尔格勒海尔汗山。这座花岗岩山脉从周围的草原上戏剧性地耸立而起，被当地游牧民视为神圣。探索山区后，我们继续前往巴嘎嘎兹林楚卢，一处拥有古老岩画和佛教洞窟寺庙的迷人岩石地貌。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>摩托车介绍和安全简报</li>
+                                <li>参观神圣的佐尔格勒海尔汗山</li>
+                                <li>探索古老的岩石雕刻</li>
+                                <li>蒙古包营地的传统欢迎仪式</li>
+                                <li>在巴嘎嘎兹林楚卢岩石上观赏日落</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 2 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/2_resized.jpg" alt="查干苏布尔嘎">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">2</div>
+                                <div>
+                                    <h3 class="day-title">查干苏布尔嘎（白色佛塔）</h3>
+                                    <span class="day-distance">230 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天我们深入戈壁沙漠，抵达令人叹为观止的查干苏布尔嘎（白色佛塔）地貌。这些引人注目的石灰岩悬崖，由千年来的风和水侵蚀而成，远看就像一座废弃的城市。色彩斑斓的沉积岩层创造出一幅全景画，随着一天中不同时段而变换颜色。这个地方提供了出色的摄影机会，让你一窥蒙古古老的地质历史。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>沙漠骑行技巧指导</li>
+                                <li>探索查干苏布尔嘎悬崖</li>
+                                <li>在天然岩石地貌的阴凉处享用午餐</li>
+                                <li>在"白色佛塔"进行日落摄影</li>
+                                <li>夜宿沙漠蒙古包营地，欣赏壮观的夜空</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 3 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/3_resized.jpg" alt="三峰驼酒店">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">3</div>
+                                <div>
+                                    <h3 class="day-title">三峰驼度假村</h3>
+                                    <span class="day-distance">240 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天的旅程带我们前往豪华的三峰驼度假村，这是一座位于戈壁腹地的获奖生态度假村。这座建筑瑰宝结合了传统蒙古设计与现代舒适。沿途，我们将穿越多样化的沙漠风景，有机会与那些适应了这片严酷而美丽环境的游牧骆驼牧民互动。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>上午拜访游牧骆驼牧民家庭</li>
+                                <li>骑骆驼体验（可选）</li>
+                                <li>在家庭蒙古包享用传统蒙古午餐</li>
+                                <li>下午穿越风景如画的沙漠景观</li>
+                                <li>在三峰驼度假村享受豪华住宿和美食晚餐</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 4 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/4_resized.jpg" alt="约林阿姆">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">4</div>
+                                <div>
+                                    <h3 class="day-title">约林阿姆 – 戈壁古尔万赛汗</h3>
+                                    <span class="day-distance">140 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天的骑行距离较短，留出更多时间进行探索。我们将参观位于戈壁古尔万赛汗国家公园内的约林阿姆（秃鹫之口）冰川峡谷。这个位于沙漠中央的惊人冰川峡谷有时全年保持结冰状态。峡谷是众多鸟类和野生动物的家园，包括难以捉摸的雪豹。在继续前往营地之前，我们将享受一次穿越峡谷的中等难度徒步。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>约林阿姆峡谷导览徒步</li>
+                                <li>野生动物观察（岩羊、胡子秃鹫、鼠兔）</li>
+                                <li>参观当地自然历史博物馆</li>
+                                <li>在独特的冰层地貌拍照（季节性）</li>
+                                <li>营地晚间传统音乐表演</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 5 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/5_resized.jpg" alt="温吉音赫德">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">5</div>
+                                <div>
+                                    <h3 class="day-title">温吉音赫德</h3>
+                                    <span class="day-distance">200 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天我们向北骑行，离开沙漠景观，进入蒙古中部草原。我们的目的地是温吉音赫德遗址，这里曾是蒙古最大的寺院群之一，后来在20世纪30年代的共产主义清洗期间被摧毁。位于美丽的河谷绿洲中，寺院现在正在部分修复。骑行路线包括从沙漠到河谷的多样化景观，背景是壮观的山脉。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>具有挑战性的河流穿越（可提供支援车辆协助）</li>
+                                <li>温吉音赫德寺院遗址导览参观</li>
+                                <li>与当地佛教僧侣会面</li>
+                                <li>热石按摩疗法（可选）</li>
+                                <li>夜宿河边蒙古包营地</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 6 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/6_resized.jpg" alt="鄂尔浑瀑布">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">6</div>
+                                <div>
+                                    <h3 class="day-title">巴特乌尔济苏木 – 乌兰楚格兰</h3>
+                                    <span class="day-distance">260 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天的旅程带我们穿越蒙古最风景如画的景观，骑行前往乌兰楚格兰（红色瀑布），也被称为鄂尔浑瀑布。位于联合国教科文组织世界遗产鄂尔浑谷地，这个由火山爆发和地震形成的20米高瀑布提供了一个戏剧性的景观。周围地区在历史上具有重要意义，是蒙古文明的摇篮和前帝国首都。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>上午在巴特乌尔济村庄市场停留</li>
+                                <li>骑行穿越联合国教科文组织鄂尔浑谷地文化景观</li>
+                                <li>在鄂尔浑瀑布游泳机会（季节性）</li>
+                                <li>传统游牧毡制作演示</li>
+                                <li>夜宿家庭经营的蒙古包营地，享用家常晚餐</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 7 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/7_resized.jpg" alt="哈尔和林">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">7</div>
+                                <div>
+                                    <h3 class="day-title">哈尔和林 – 额尔森塔萨尔海</h3>
+                                    <span class="day-distance">210 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天的路线带我们前往哈尔和林，这里是成吉思汗建立的蒙古帝国古都。在这里，我们将参观额尔德尼召寺院，这是蒙古现存最古老的佛教寺院，建于1586年，使用了哈尔和林遗迹的石块。探索这个历史遗址后，我们继续前往额尔森塔萨尔海，一个沙丘与草原交汇的风景如画的地区，通常被称为"迷你戈壁"。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>额尔德尼召寺院导览参观</li>
+                                <li>参观哈尔和林博物馆，了解蒙古帝国历史</li>
+                                <li>在当地餐厅享用传统的khorkhog（羊肉烧烤）午餐</li>
+                                <li>日落时分骑行穿越额尔森塔萨尔海沙丘</li>
+                                <li>晚上篝火和传统音乐</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 8 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/8_resized.jpg" alt="呼斯台国家公园">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">8</div>
+                                <div>
+                                    <h3 class="day-title">呼斯台国家公园 – 蒙古游牧营地</h3>
+                                    <span class="day-distance">180 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>今天我们前往呼斯台国家公园，这里是成功重新引进的普氏野马（塔克）的家园。在观察野生动物并了解保护工作后，我们继续前往蒙古游牧营地，在那里我们将通过骑术、射箭和传统游戏的展示体验传统游牧文化。这是一个沉浸在蒙古文化遗产中的绝佳机会。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>上午在呼斯台国家公园观察野生动物</li>
+                                <li>公园管理员的保护工作介绍</li>
+                                <li>传统蒙古射箭课程</li>
+                                <li>游牧骑术技能展示</li>
+                                <li>参与传统游戏和手工艺活动</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 9 -->
+                    <div class="day-slide">
+                        <div class="day-image">
+                            <img src="tour/9_resized.jpg" alt="返回乌兰巴托">
+                        </div>
+                        <div class="day-content">
+                            <div class="day-header">
+                                <div class="day-number">9</div>
+                                <div>
+                                    <h3 class="day-title">返回乌兰巴托</h3>
+                                    <span class="day-distance">50 公里</span>
+                                </div>
+                            </div>
+                            <div class="day-description">
+                                <p>在我们的最后一天，我们在蒙古游牧营地享受悠闲的早晨，随后短途返回乌兰巴托。归还摩托车后，我们将有时间在国营百货商店或纳然图勒市场购买纪念品。我们的冒险之旅以城市中一家顶级餐厅的特别告别晚宴作为结束，在那里我们可以分享穿越蒙古游牧之旅的美好回忆。</p>
+                            </div>
+                            <ul class="day-activities">
+                                <li>蒙古游牧营地的最后一个早晨</li>
+                                <li>轻松骑行返回乌兰巴托</li>
+                                <li>摩托车归还和行程总结</li>
+                                <li>城市购买纪念品时间</li>
+                                <li>告别晚宴庆祝</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Booking Section -->
+        <section class="booking-section">
+            <h2>准备好开始终生难忘的冒险了吗？</h2>
+            <p>我们的沙漠与山地之旅从5月到9月开展。团队规模有限，以确保个性化的体验。</p>
+            <a href="#contact" class="booking-cta">预订此行程</a>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">蒙古草原骑手</div>
+                <p>通过我们无与伦比的摩托车之旅体验真正的蒙古荒野。冒险在这片无尽地平线的土地上等待着您。</p>
+                <div class="footer-info">
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>蒙古乌兰巴托苏赫巴托尔街123号</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+976 8811 2339</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+976 8811 2885</span>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <p>在社交媒体上关注我们的冒险，获取来自蒙古荒野的最新动态、照片和故事。</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i> 
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>联系我们</h3>
+                <div class="region-contact">
+                    <h4>亚洲地区</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <span>微信: 157 2158 5900</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+86 157 2158 5900</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>azzayazaya@qq.com</span>
+                    </div>
+                </div>
+                
+                <div class="region-contact">
+                    <h4>欧洲及美国地区</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp: +46 73 666 7779</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+46 73 666 7779</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>bilguun.se@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <p>&copy; 2025 SteppeAdventures - 版权所有</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Navigation toggle for mobile
+function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+}
+
+// Scroll event for navbar background
+window.addEventListener('scroll', function() {
+    const navWrapper = document.querySelector('.nav-wrapper');
+    
+    if (window.scrollY > 50) {
+        navWrapper.classList.add('scrolled');
+    } else {
+        navWrapper.classList.remove('scrolled');
+    }
+});
+        
+        // Day slideshow functionality
+        let currentDayIndex = 0;
+        const totalDays = 9;
+        const slideContainer = document.querySelector('.day-slides');
+        const dayDots = document.querySelectorAll('.day-dot');
+        const currentDayDisplay = document.getElementById('current-day');
+        
+        // Initialize the slideshow
+        updateSlidePosition();
+        
+        // Event listeners for controls
+        document.querySelector('.prev-day').addEventListener('click', () => {
+            navigateDay(-1);
+        });
+        
+        document.querySelector('.next-day').addEventListener('click', () => {
+            navigateDay(1);
+        });
+        
+        // Navigate to previous or next day
+        function navigateDay(direction) {
+            currentDayIndex = (currentDayIndex + direction + totalDays) % totalDays;
+            updateSlidePosition();
+        }
+        
+        // Go to specific day
+        function goToDay(index) {
+            currentDayIndex = index;
+            updateSlidePosition();
+        }
+        
+        // Update slide position and indicators
+        function updateSlidePosition() {
+            // Update slides position
+            slideContainer.style.transform = `translateX(-${currentDayIndex * 100}%)`;
+            
+            // Update current day indicator
+            currentDayDisplay.textContent = currentDayIndex + 1;
+            
+            // Update dots
+            dayDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentDayIndex);
+            });
+        }
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                navigateDay(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateDay(1);
+            }
+        });
+        
+        // Add scroll event to change navbar background
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteppeAdventures - Mongolian Wilderness Tours</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Video Background -->
+    <header id="home">
+        <div class="header-video">
+            <video autoplay muted loop id="header-video">
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="nav-wrapper">
+            <a href="#home" class="logo">SteppeAdventures</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tours">Our Tours</a></li>
+                <li><a href="#bikes">Our Bikes</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="language-container">
+                    <a href="index-chinese.html">中文</a>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
+        <div class="header-content">
+            <div class="header-text fade-in">
+                <h1>Explore the Mongolian Wilderness</h1>
+                <p>A place where nature and adventure unite. Experience the freedom of riding through endless steppes and breathtaking landscapes.</p>
+                <a href="#tours" class="btn">Discover Our Tours</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            
+            <div class="about-content">
+                <p>At Steppeadventures, we offer an unparalleled motorbike tour experience through the breathtaking landscapes of Mongolia. This is not just a ride—it's an authentic adventure where you take the lead, feeling the raw power of the wilderness beneath your tires while our dedicated support team ensures you have everything you need for an unforgettable journey.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card slide-in">
+                        <h3>Ride Freely, Explore Wildly</h3>
+                        <p>You are in control of your adventure, riding through endless steppes, vast deserts, and towering mountains. Our team follows in the background, ensuring your independence while providing safety and support when needed.</p>
+                    </div>
+                    
+                    <div class="feature-card slide-in" style="animation-delay: 0.2s;">
+                        <h3>A Fully Supported Journey</h3>
+                        <p>While you conquer Mongolia's rugged terrain, our mechanics, chefs, and translators travel alongside you. Whether it's a quick repair, a delicious meal by the campfire, or help communicating with nomadic families, we've got you covered.</p>
+                    </div>
+                    
+                    <div class="feature-card slide-in" style="animation-delay: 0.4s;">
+                        <h3>Authentic Mongolian Experience</h3>
+                        <p>Spend your nights in traditional ger camps, dine under a sky full of stars, and immerse yourself in Mongolia's legendary hospitality. Our local team ensures you experience the true essence of nomadic culture.</p>
+                    </div>
+                    
+                    <div class="feature-card slide-in" style="animation-delay: 0.6s;">
+                        <h3>Breathtaking Landscapes</h3>
+                        <p>From the rolling dunes of the Gobi Desert to the untamed Altai Mountains, every turn on your motorbike unveils a new, awe-inspiring vista. The sense of freedom and vastness is unlike anywhere else on Earth.</p>
+                    </div>
+                </div>
+                
+                <h3>Why Mongolia?</h3>
+                
+                <div class="mongolia-section">
+                    <div class="mongolia-text">
+                        <p>Mongolia is one of the last true frontiers for adventure seekers. With endless off-road tracks, pristine nature, and a rich nomadic culture, it's a dream destination for motorcyclists.</p>
+                        
+                        <ul class="mongolia-features">
+                            <li>Vast, untouched landscapes</li>
+                            <li>Ancient nomadic traditions</li>
+                            <li>Endless off-road adventures</li>
+                            <li>Diverse terrain from desert to mountains</li>
+                        </ul>
+                        
+                        <p>There are no fences, no traffic jams—just the open road, wild horses, and the call of adventure.</p>
+                    </div>
+                    <div class="mongolia-image">
+                        <img src="mongolia.jpg" alt="Mongolian landscape">
+                    </div>
+                </div>
+                
+                <div class="tagline-banner">
+                    <div class="tagline-content">
+                        <div class="tagline-box"><span>Ride Wild.</span></div>
+                        <div class="tagline-box"><span>Explore Freely.</span></div>
+                        <div class="tagline-box"><span>Live the Adventure.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="section">
+        <div class="container">
+            <h2>Our Tours</h2>
+            
+            <div class="tours-grid">
+                <div class="tour-card fade-in">
+                    <div class="tour-image">
+                        <img src="gobi.jpg" alt="Desert & Mountain Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Desert & Mountain Tour</h3>
+                        <div class="tour-route">
+                            <h4>Route Overview</h4>
+                            <div class="tour-day"><strong>Day 1:</strong> Ulaanbaatar → Elsen Tasarkhai → Tsetserleg (270 km)</div>
+                            <div class="tour-day"><strong>Day 2:</strong> Tsetserleg → Terkhiin Tsagaan Lake → Khorgo (200 km)</div>
+                            <div class="tour-day"><strong>Day 3:</strong> Khorgo → Khatgal (Khuvsgul Lake) (300 km)</div>
+                            <div class="tour-day"><strong>Day 4:</strong> Khatgal (Rest, sightseeing, break)</div>
+                            <div class="tour-day"><strong>Day 5:</strong> Khatgal → Khankh (Northern shore) (150 km)</div>
+                            <div class="tour-day"><strong>Day 6:</strong> Khankh → Renchinlkhumbe → Ulaan-Uul (250 km)</div>
+                            <div class="tour-day"><strong>Day 7:</strong> Ulaan-Uul → Bulgan Province (270 km)</div>
+                            <div class="tour-day"><strong>Day 8:</strong> Bulgan → Khustai National Park (250 km)</div>
+                            <div class="tour-day"><strong>Day 9:</strong> Khustai National Park → Ulaanbaatar (100 km)</div>
+                        </div>
+                        <a href="tour1.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="tour-card fade-in" style="animation-delay: 0.3s;">
+                    <div class="tour-image">
+                        <img src="lake.jpg" alt="Nomadic Adventure Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Nomadic Adventure Tour</h3>
+                        <div class="tour-route">
+                            <h4>Route Overview</h4>
+                            <div class="tour-day"><strong>Day 1:</strong> Zorgol Khairkhan Mountain – Baga Gazriin Chuluu (220 km)</div>
+                            <div class="tour-day"><strong>Day 2:</strong> Tsagaan Suvarga (230 km)</div>
+                            <div class="tour-day"><strong>Day 3:</strong> 3 Camels Lodge (240 km)</div>
+                            <div class="tour-day"><strong>Day 4:</strong> Yolyn Am – Gobi Gurvan Saikhan (140 km)</div>
+                            <div class="tour-day"><strong>Day 5:</strong> Ongiin Khiid (200 km)</div>
+                            <div class="tour-day"><strong>Day 6:</strong> Bat-Ulzii Soum – Ulaan Tsutgalan (260 km)</div>
+                            <div class="tour-day"><strong>Day 7:</strong> Kharkhorin – Elsen Tasarkhai (210 km)</div>
+                            <div class="tour-day"><strong>Day 8:</strong> Khustai National Park – Mongol Nomadic (180 km)</div>
+                            <div class="tour-day"><strong>Day 9:</strong> Ulaanbaatar (50 km)</div>
+                        </div>
+                        <a href="tour2.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bikes Section -->
+    <section id="bikes" class="section">
+        <div class="container">
+            <h2>Our Bikes</h2>
+            
+            <div class="bike-showcase">
+                <div class="bike-gallery">
+                    <div class="bike-gallery-container">
+                        <div class="bike-slide active">
+                            <img src="moto/1.jpeg" alt="Cross 125 X - Side View" class="bike-image">
+                        </div>
+                        <div class="bike-slide">
+                            <img src="moto/2.jpeg" alt="Cross 125 X - Angle View" class="bike-image">
+                        </div>
+                        <div class="bike-slide">
+                            <img src="moto/3.jpeg" alt="Cross 125 X - Dashboard View" class="bike-image">
+                        </div>
+                        <div class="bike-slide">
+                            <img src="moto/4.jpeg" alt="Cross 125 X - Side Angle View" class="bike-image">
+                        </div>
+                        <div class="bike-slide">
+                            <img src="moto/5.jpeg" alt="Cross 125 X - Front View" class="bike-image">
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-nav">
+                        <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+                        <div class="gallery-indicators">
+                            <span class="indicator active" onclick="setSlide(0)"></span>
+                            <span class="indicator" onclick="setSlide(1)"></span>
+                            <span class="indicator" onclick="setSlide(2)"></span>
+                            <span class="indicator" onclick="setSlide(3)"></span>
+                            <span class="indicator" onclick="setSlide(4)"></span>
+                        </div>
+                        <button class="next-btn" onclick="changeSlide(1)">❯</button>
+                    </div>
+                </div>
+                
+                <div class="bike-info">
+                    <h3>JL125-12 CROSS 125 X</h3>
+                    
+                    <div class="specs-container">
+                        <div class="specs-section">
+                            <h4>Engine Specifications</h4>
+                            <ul class="specs-list">
+                                <li><strong>Type:</strong> Air Cooled, 4 Stroke, SOHC</li>
+                                <li><strong>Max Power:</strong> 7.5 kW @ 8000 RPM</li>
+                                <li><strong>Max Torque:</strong> 10.5 N·m @ 5200 RPM</li>
+                                <li><strong>Starter System:</strong> Electric / Foot</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="specs-section">
+                            <h4>Dimensions & Weight</h4>
+                            <ul class="specs-list">
+                                <li><strong>Overall Length:</strong> 1920 mm</li>
+                                <li><strong>Overall Height:</strong> 1150 mm</li>
+                                <li><strong>Overall Width:</strong> 720 mm</li>
+                                <li><strong>Vehicle Weight:</strong> 106 kg</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="specs-section">
+                            <h4>Braking System & Wheels</h4>
+                            <ul class="specs-list">
+                                <li><strong>Front Brake:</strong> Disc</li>
+                                <li><strong>Rear Brake:</strong> Drum</li>
+                                <li><strong>Wheel Size:</strong> 18" front / 16" rear</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="specs-section">
+                            <h4>Fuel & Capacity</h4>
+                            <ul class="specs-list">
+                                <li><strong>Fuel Tank Volume:</strong> 9L</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn" onclick="scrollToSection('contact')">Inquire About This Bike</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="horse.jpg" alt="Mongolian horses">
+                </div>
+                <div class="gallery-item">
+                    <img src="malchin.jpg" alt="Mongolian herder">
+                </div>
+                <div class="gallery-item">
+                    <img src="gobi.jpg" alt="Mongolian mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="sky.jpg" alt="Mongolian sky">
+                </div>
+                <div class="gallery-item">
+                    <img src="temee.jpg" alt="Camels">
+                </div>
+                <div class="gallery-item">
+                    <img src="tal.jpg" alt="Steppe landscape">
+                </div>
+                <div class="gallery-item">
+                    <img src="uul.jpg" alt="Mountain landscape">
+                </div>
+                <div class="gallery-item">
+                    <img src="burged.jpg" alt="Eagle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">Steppeadventures</div>
+                    <p>Experience authentic Mongolian wilderness through our unparalleled motorbike tours. Adventure awaits in the land of endless horizons.</p>
+                    <div class="footer-info">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Sukhbaatar Street, Ulaanbaatar, Mongolia</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+976 8811 2339</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+976 8811 2885</span>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <p>Follow our adventures on social media for the latest updates, photos, and stories from the Mongolian wilderness.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i> 
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="region-contact">
+                        <h4>From Asia</h4>
+                        <div class="contact-item">
+                            <i class="fab fa-weixin"></i>
+                            <span>WeChat: 157 2158 5900</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+86 157 2158 5900</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>azzayazaya@qq.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="region-contact">
+                        <h4>From Europe & USA</h4>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp: +46 73 666 7779</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+46 73 666 7779</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>bilguun.se@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-footer">
+                <p>&copy; 2025 Steppeadventures - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle for mobile
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Scroll event for navbar background
+        window.addEventListener('scroll', function() {
+            const navWrapper = document.querySelector('.nav-wrapper');
+            
+            if (window.scrollY > 50) {
+                navWrapper.classList.add('scrolled');
+            } else {
+                navWrapper.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll to sections
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerOffset = 80;
+                const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = sectionPosition - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // This updated script will fix the mobile navigation issue
+// Add this to your existing JavaScript or replace the bike gallery part
+
+// Bike gallery slideshow
+let currentSlide = 0;
+const slides = document.querySelectorAll('.bike-slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    slides[n].classList.add('active');
+    indicators[n].classList.add('active');
+}
+
+function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function setSlide(n) {
+    currentSlide = n;
+    showSlide(currentSlide);
+}
+
+// Ensure navigation works on mobile by preventing event propagation
+document.querySelector('.prev-btn').addEventListener('click', function(event) {
+    event.stopPropagation();
+    changeSlide(-1);
+});
+
+document.querySelector('.next-btn').addEventListener('click', function(event) {
+    event.stopPropagation();
+    changeSlide(1);
+});
+
+document.querySelectorAll('.indicator').forEach((indicator, index) => {
+    indicator.addEventListener('click', function(event) {
+        event.stopPropagation();
+        setSlide(index);
+    });
+});
+
+// Auto-advance slides every 5 seconds
+let slideInterval = setInterval(() => {
+    changeSlide(1);
+}, 5000);
+
+// Pause auto-advance when hovering over gallery
+document.querySelector('.bike-gallery')?.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+// Resume auto-advance when mouse leaves
+document.querySelector('.bike-gallery')?.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+});
+        
+        
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.fade-in, .slide-in');
+        
+        function checkReveal() {
+            revealElements.forEach(element => {
+                const revealPoint = 150;
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        
+        // Initial check and scroll event
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('load', checkReveal);
+        
+    </script>
+</body>
+</html>

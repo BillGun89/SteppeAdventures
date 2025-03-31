@@ -1,0 +1,1064 @@
+/* 
+==============================================
+TABLE OF CONTENTS:
+----------------------------------------------
+1. IMPORTS
+2. VARIABLES
+3. RESET & BASE STYLES
+4. LAYOUT & CONTAINERS
+5. HEADER & NAVIGATION
+6. HERO SECTION
+7. SECTION STYLES
+8. ABOUT US SECTION
+9. TOURS SECTION
+10. BIKES SECTION
+11. GALLERY SECTION
+12. BUTTONS & INTERACTIVE ELEMENTS
+13. FOOTER 
+14. ANIMATIONS
+15. MEDIA QUERIES
+==============================================
+*/
+
+/* ================ 1. IMPORTS ================ */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap');
+        
+/* ================ 2. VARIABLES ================ */
+/* Add these styles to your existing CSS file */
+
+/* Define the container-width variable that was missing */
+:root {
+    --primary: #2c75a0;         /* Blue - only for buttons/interactive elements */
+    --primary-light: #3a8bc2;   /* Light blue for hover states */
+    --primary-dark: #1a5980;    /* Dark blue for active states */
+    --text-dark: #333;          /* Almost black text */
+    --text-light: #666;         /* Dark gray text */
+    --background: #fbfbfb;      /* Off-white background */
+    --white: #ffffff;           /* Pure white */
+    --section-alt-bg: #f5f5f5;  /* Light gray for alternate sections */
+    --container-width: 1200px;  /* Add this line */
+    --transition: all 0.3s ease; /* Add transition variable */
+    --shadow: 0 4px 10px rgba(0,0,0,0.08); /* Add shadow variable */
+    --border-radius: 4px;       /* Add border radius variable */
+    --dark-overlay: rgba(0,0,0,0.4); /* Add overlay variable */
+}
+
+/* Ensure the container class is working as intended */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* Fix for tour1.html style consistency */
+.tour-detail-container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+/* ================ 3. RESET & BASE STYLES ================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ================ 4. LAYOUT & CONTAINERS ================ */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.section {
+    padding: 6rem 0;
+    width: 100%;
+}
+
+/* ================ 5. HEADER & NAVIGATION ================ */
+header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-overlay);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10%;
+    color: var(--white);
+}
+
+.header-text {
+    max-width: 600px;
+}
+
+.header-text h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.header-text p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.nav-wrapper.scrolled {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.nav-wrapper.scrolled .logo,
+.nav-wrapper.scrolled .nav-menu a {
+    color: var(--text-dark);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-light);
+}
+
+.language-container {
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.nav-wrapper.scrolled .hamburger div {
+    background-color: var(--text-dark);
+}
+
+/* Ensure hamburger is visible when transformed to X */
+.hamburger.active div {
+    /* Ensure high contrast for visibility */
+    background-color: var(--text-dark);
+}
+
+/* Add specific styles for each line in active state for extra clarity */
+.hamburger.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: var(--primary);
+}
+
+.hamburger.active .line2 {
+    opacity: 0;
+}
+
+.hamburger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: var(--primary);
+}
+
+/* Ensure the menu appears properly when active */
+.nav-menu.active {
+    right: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ================ 6. SECTION STYLES ================ */
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #333;
+    margin: 15px auto;
+    border-radius: 1px;
+}
+
+.section:nth-child(even) {
+    background-color: var(--section-alt-bg);
+}
+
+.section:nth-child(odd) {
+    background-color: var(--background);
+}
+
+/* ================ 7. ABOUT US SECTION ================ */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.about-content h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+}
+
+.mongolia-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 4rem 0;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.mongolia-text {
+    flex: 1;
+}
+
+.mongolia-image {
+    flex: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 300px;
+}
+
+.mongolia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.mongolia-section:hover .mongolia-image img {
+    transform: scale(1.05);
+}
+
+.mongolia-features {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.mongolia-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.mongolia-features li::before {
+    content: '✓';
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.tagline-banner {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+.tagline-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.tagline-box {
+    animation: fadeIn 1.5s ease-in-out forwards, float 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+.tagline-box:nth-child(1) { animation-delay: 0s; }
+.tagline-box:nth-child(2) { animation-delay: 0.4s; }
+.tagline-box:nth-child(3) { animation-delay: 0.8s; }
+
+.tagline-box span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    transition: var(--transition);
+    display: block;
+    text-transform: uppercase;
+}
+
+.tagline-box:hover span {
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
+
+/* ================ 8. TOURS SECTION ================ */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.tour-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.tour-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tour-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-content {
+    padding: 1.5rem;
+}
+
+.tour-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+.tour-route {
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.tour-route h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.tour-day {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.tour-day strong {
+    color: var(--primary);
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+/* ================ 9. BIKES SECTION ================ */
+.bike-showcase {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.bike-gallery {
+    flex: 1;
+    position: relative;
+}
+
+.bike-gallery-container {
+    height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.bike-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bike-slide.active {
+    opacity: 1;
+}
+
+.bike-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.bike-gallery:hover .bike-image {
+    transform: scale(1.03);
+}
+
+.gallery-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.gallery-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.indicator.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+}
+
+.prev-btn, .next-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.bike-info {
+    flex: 1;
+}
+
+.bike-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.specs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.specs-section h4 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.specs-section h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 15px;
+    width: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+.specs-list {
+    list-style: none;
+}
+
+.specs-list li {
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.specs-list li strong {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ================ 10. GALLERY SECTION ================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 200px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================ 11. BUTTONS & INTERACTIVE ELEMENTS ================ */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ================ 12. FOOTER ================ */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 5rem 0 3rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-light);
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-column p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-info {
+    margin-top: 1.5rem;
+}
+
+.footer-info div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.footer-info i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.social-icon {
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--primary-light);
+    transform: translateY(-5px);
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+.region-contact {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.region-contact:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.region-contact h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1rem;
+    min-width: 20px;
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ================ 13. ANIMATIONS ================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* ================ 14. MEDIA QUERIES ================ */
+@media (max-width: 992px) {
+    .mongolia-section {
+        flex-direction: column;
+    }
+
+    .mongolia-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .bike-showcase {
+        flex-direction: column;
+    }
+
+    .bike-gallery, .bike-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card, .tour-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-text p {
+        font-size: 1.1rem;
+    }
+    
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bike-gallery-container {
+        height: 300px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tagline-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-content {
+        padding: 0 5%;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .nav-wrapper {
+        padding: 1rem;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .header-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .gallery-item {
+        height: 150px;
+    }
+}
+/* Add these styles to your existing CSS file */
+
+/* Fix for the navigation menu z-index */
+.nav-menu {
+    z-index: 1000;
+}
+
+/* Ensure the bike gallery navigation buttons have higher z-index */
+.gallery-nav {
+    position: relative;
+    z-index: 100; 
+}
+
+.prev-btn, .next-btn {
+    position: relative;
+    z-index: 101;
+}
+
+/* Make the buttons larger on mobile for better touch targets */
+@media (max-width: 768px) {
+    .prev-btn, .next-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+    }
+    
+    /* Add space between the gallery and other elements */
+    .bike-gallery {
+        margin-bottom: 2rem;
+    }
+    
+    /* Fix for the hamburger menu to not overlap with content */
+    .hamburger {
+        position: relative;
+        z-index: 1002; /* Higher than the nav-menu */
+    }
+    
+    /* Make sure the active nav menu doesn't interfere with other interactive elements */
+    .nav-menu.active {
+        z-index: 999;
+    }
+    
+    /* Indicators should be easy to tap */
+    .indicator {
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+    }
+    
+    /* Add padding to ensure tap areas don't overlap */
+    .gallery-indicators {
+        padding: 10px 0;
+    }
+}
